@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title> Z Position Data </title>
+		<script src="http://d3js.org/d3.v3.min.js"></script>
+		<script src="http://dimplejs.org/dist/dimple.v2.1.2.min.js"></script>
+		<script type="text/javascript" src="draw.js"></script>
+    	<script type="text/javascript" src="csv.js"></script>
+	</head>
+	<body>
+		<h1>Z Position Data</h1>
+		<a href="/MainPage.html">Back to Main Page</a><br><br>
+
+		<!--Creates a button that will process/display data when clicked-->
+		<button id="loaddata" value="PhysicsData">Show Data(Line Graph)</button><br><br>
+
+		<div id="ts">Starting time(seconds): </div><br/><div id="data">Starting Location(Meters): </div>
+
+		<script type = "text/javascript">
+			d3.select("#loaddata").on("click", function(d,i){
+              loadcsv("output.txt", 12);
+        	})
+		</script>
+	</body>
+</html>
